@@ -1,18 +1,24 @@
 *{padding:0; margin:0; list-style: none;}
 
-body{background:lightpink}
+body{background:#efefef}
 section{max-width: 1400px; position:relative; padding-top:100px;}
-section h1{text-align: center; font-size: 35px; padding-bottom:30px;}
-section .box{width:300px; margin:0 auto; border-radius: 30px; border:2px lightcoral solid; padding:30px 130px; background:beige; position:relative;}
+section h1{text-align: center; font-size: 35px; padding-bottom:15px;}
+section .box{width:300px; margin:0 auto; border-radius: 3px;  padding:30px 130px; background:navajowhite; position:relative;}
 
-/* 할일입력 */
+/* 할일입력 */ 
 .inputField{position:absolute;  left:50%; transform:translate(-50%, 0); display: flex;}
-#field {border:2px lightsalmon solid; padding:3px; background:white; outline: none;  border-radius: 5px; font-size: 18px; margin-right:5px;}
+.inputField.edit{display: none;}
+#field {border:2px lightsalmon solid; padding:3px; background:white; outline: none;  border-radius: 5px; font-size: 18px; }
+#edit_field {border:2px lightsalmon solid; padding:3px; background:white; outline: none;  border-radius: 5px; font-size: 18px; margin-right:5px;}
 .inputField button{padding:3px; border:0; background:lightsalmon; color:white; font-size: 18px; border-radius: 5px; cursor:pointer;}
 
 /* 할일 */
 
-.listbox{padding-top:50px;}
-
+.listbox{padding-top:50px; margin-bottom:20px;}
+.list li{cursor: pointer; width: 100%; background: white; padding: 5px; border-radius: 5px; position:relative; margin-bottom:10px; line-height: 20px;}
+.list li:hover{background:#efefef;}
+.list li button{ position:absolute; right:5px; top:50%; transform:translateY(-50%); background:none; border:0; cursor: pointer;}
+.list li button:last-child{right:20px; width:35px;}
+.list li.comp{text-decoration: line-through; color:#666;}
 /* 전체삭제 */
-.allDel{padding:8px; border:0; background:lightpink; color:white; border-radius: 5px; font-size: 18px; display: block; margin:0 auto;}
+.allDel{padding:8px; border:0; background:#333; color:white; border-radius: 5px; font-size: 18px; display: block; margin:0 auto; cursor: pointer;}
