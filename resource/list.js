@@ -19,6 +19,7 @@ function addTodo(){
         addList.appendChild(addBtn2);
         addList.addEventListener( "click", complete); //완료 이벤트 추가
         addBtn.innerText='X';
+        addBtn.classList.add('delBtn')
         addBtn2.innerText='수정';
         addBtn2.classList.add('editBtn')
         addBtn.addEventListener( "click", del ); //삭제 버튼 이벤트
@@ -51,8 +52,12 @@ function edit(e){
     let editBtn = document.querySelectorAll('.editBtn') ;//수정 버튼 숨기기
     for(i=0; i< editBtn.length; i++){
         editBtn[i].style.zIndex='-9999'; 
-
     }
+    let delBtn = document.querySelectorAll('.delBtn') ;//삭제 버튼 숨기기
+    for(i=0; i< editBtn.length; i++){
+        delBtn[i].style.zIndex='-9999'; 
+    }
+
 
 }
 
@@ -71,6 +76,7 @@ function editTodo(){
         edit_list.appendChild(addBtn);
         edit_list.appendChild(addBtn2);
         addBtn.innerText='X';
+        addBtn.classList.add('delBtn');
         addBtn2.innerText='수정';
         addBtn2.classList.add('editBtn');
         addBtn.addEventListener( "click", del ); //삭제 버튼 이벤트 추가
@@ -82,6 +88,11 @@ function editTodo(){
         let editBtn = document.querySelectorAll('.editBtn'); //수정 버튼 보이기
         for(i=0; i< editBtn.length; i++){
             editBtn[i].style.zIndex='0'; 
+    
+        }
+        let delBtn = document.querySelectorAll('.delBtn'); //삭제 버튼 보이기
+        for(i=0; i< delBtn.length; i++){
+            delBtn[i].style.zIndex='0'; 
     
         }
     
@@ -98,6 +109,7 @@ function allDel(){
             alert('할 일 목록이 없습니다.')
         }else{
             list.innerText = '';
+            alert('할 일 목록을 비우는데 성공했습니다.')
         }
     }
 }

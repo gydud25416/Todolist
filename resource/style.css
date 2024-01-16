@@ -9,7 +9,7 @@ section .box{width:300px; margin:0 auto; border-radius: 3px;  padding:30px 130px
 .inputField{position:absolute;  left:50%; transform:translate(-50%, 0); display: flex;}
 .inputField.edit{display: none;}
 #field {border:2px lightsalmon solid; padding:3px; background:white; outline: none;  border-radius: 5px; font-size: 18px; }
-#edit_field {border:2px lightsalmon solid; padding:3px; background:white; outline: none;  border-radius: 5px; font-size: 18px; margin-right:5px;}
+#edit_field {border:2px lightsalmon solid; padding:3px; background:white; outline: none;  border-radius: 5px; font-size: 18px; }
 .inputField button{padding:3px; border:0; background:lightsalmon; color:white; font-size: 18px; border-radius: 5px; cursor:pointer;}
 
 /* 할일 */
