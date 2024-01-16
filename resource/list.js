@@ -109,6 +109,7 @@ function allDel(){
             alert('할 일 목록이 없습니다.')
         }else{
             list.innerText = '';
+            alert('할 일 목록을 비우는데 성공했습니다.')
         }
     }
 }
