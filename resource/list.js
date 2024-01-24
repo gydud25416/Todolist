@@ -7,9 +7,9 @@ let edit_list = document.querySelector('.edit_list')    //수정중인 li
 field.addEventListener("keypress", function(e){
     if(e.keyCode == 13){
         addTodo();
-        return false;
+         
     }
-    return false;
+ 
 });
 
 // 할 일 추가
@@ -80,15 +80,21 @@ function edit(e){
 
     editInput.addEventListener("keypress", function(e){
         if(e.keyCode == 13){
-            editTodo(e);
-            // alert('dk')
+            if( e.target.value == ''){
+                alert('내용을 입력해주세요');
+            }else{
+                editTodo(e);
+                // alert('dk')
+            }
         }
     })
     editInput.addEventListener("change", function(e){
-        
+        if( e.target.value == ''){
+            e.target.focus(); //추가 기재란 포커스
+        }else{
             editTodo(e);
             // alert('dk')
-       
+        }
     })
 }
 
@@ -98,7 +104,7 @@ function edit(e){
 //수정 완료
 function editTodo(e){
     if( e.target.value == ''){
-        alert('내용을 입력해주세요')
+        alert('내용을 입력해주세요');
     }else{
         let edit_list = document.querySelector('.edit_list') //수정한 li
         let addP =document.querySelector('.edit_list p');

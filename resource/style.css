@@ -23,6 +23,7 @@ section .box{width:300px; margin:0 auto; border-radius: 3px;  padding:30px 130px
 .list li.comp{background:#efefef;}
 .list li.comp p{text-decoration: line-through; color:#666; }
 
-.list li input{width:100%; padding:5px; line-height:20px; border-radius: 5px; border:3px solid #40b945; box-sizing: border-box; }
+.list li input{width:100%; padding:5px; line-height:20px; border-radius: 5px; border:3px solid #00ffff; box-sizing: border-box; }
+.list li input:focus{border:3px solid #00ebeb; outline:#00ebeb;}
 /* 전체삭제 */
 .allDel{padding:8px; border:0; background:#333; color:white; border-radius: 5px; font-size: 18px; display: block; margin:0 auto; cursor: pointer;}
