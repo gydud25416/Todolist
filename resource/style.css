@@ -15,10 +15,14 @@ section .box{width:300px; margin:0 auto; border-radius: 3px;  padding:30px 130px
 /* 할일 */
 
 .listbox{padding-top:50px; margin-bottom:20px;}
-.list li{cursor: pointer; width: 100%; background: white; padding: 5px; border-radius: 5px; position:relative; margin-bottom:10px; line-height: 20px;}
+.list li{cursor: pointer; width: 100%; background: white;  border-radius: 5px; position:relative; margin-bottom:10px; line-height: 20px;}
+.list li p{padding: 5px; line-height:20px;}
 .list li:hover{background:#efefef;}
 .list li button{ position:absolute; right:5px; top:50%; transform:translateY(-50%); background:none; border:0; cursor: pointer;}
 .list li button:last-child{right:20px; width:35px;}
-.list li.comp{text-decoration: line-through; color:#666;}
+.list li.comp{background:#efefef;}
+.list li.comp p{text-decoration: line-through; color:#666; }
+
+.list li input{width:100%; padding:5px; line-height:20px; border-radius: 5px; border:3px solid #40b945; box-sizing: border-box; }
 /* 전체삭제 */
 .allDel{padding:8px; border:0; background:#333; color:white; border-radius: 5px; font-size: 18px; display: block; margin:0 auto; cursor: pointer;}
