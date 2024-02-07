@@ -54,7 +54,10 @@ function complete(e){
 //목록 선택 삭제
 function del(e){
     let delOne = e.target.parentElement; //선택된 부모요소
+    var confirmT = e.target.parentElement.children[0].innerText;
+    if(confirm( confirmT + '을(를) 삭제하시겠습니까?') == true){
     delOne.remove(); 
+}
 }
 // 할 일 수정 중
 function edit(e){
